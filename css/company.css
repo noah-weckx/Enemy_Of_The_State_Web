@@ -32,6 +32,7 @@
     border-radius: 12px;
     padding: 3rem;
     border-top: 4px solid var(--accent-primary);
+    text-align: center;
 }
 
 .mv-card h2 {
@@ -101,4 +102,10 @@
     color: var(--accent-secondary);
     font-size: 0.9rem;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
 }

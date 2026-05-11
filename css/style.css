@@ -183,6 +183,7 @@ header {
     padding: 0.4rem 2rem 0.4rem 0.8rem;
     border-radius: 4px;
     font-size: 0.9rem;
+    letter-spacing: 1px;
     cursor: pointer;
     font-family: var(--font-heading);
     text-transform: uppercase;
@@ -192,15 +193,24 @@ header {
     background-repeat: no-repeat;
     background-position: right 0.5rem center;
     background-size: 1em;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.lang-select:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
 }
 
 .lang-select:focus {
     border-color: var(--accent-primary);
+    box-shadow: 0 0 10px rgba(204, 34, 34, 0.3);
 }
 
 .lang-select option {
     background: var(--bg-primary);
     color: #fff;
+    font-family: var(--font-body);
+    letter-spacing: normal;
 }
 
 .nav-links a {
@@ -598,6 +608,22 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .nav-logo-img {
+        height: 36px;
+    }
+
+    .logo-wrapper {
+        gap: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
     .hero::after {
         background: linear-gradient(180deg, rgba(77, 81, 134, 0.7) 0%, rgba(77, 81, 134, 0.95) 100%);
     }
@@ -628,6 +654,24 @@ footer {
 
     .download-content h2 {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 0.9rem;
+    }
+    
+    .nav-logo-img {
+        height: 28px;
+    }
+    
+    .logo-wrapper {
+        gap: 0.4rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
     }
 }
 
