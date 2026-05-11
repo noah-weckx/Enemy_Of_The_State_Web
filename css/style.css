@@ -589,10 +589,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
     .hero::after {
         background: linear-gradient(180deg, rgba(77, 81, 134, 0.7) 0%, rgba(77, 81, 134, 0.95) 100%);
     }
@@ -683,77 +679,35 @@ footer {
 
 /* 2. Responsive Overrides */
 @media (max-width: 768px) {
+
+    /* This ensures the toggle is visible and nav starts hidden */
     .mobile-nav-toggle {
         display: block;
-        /* Show on mobile */
     }
 
     .nav-links {
         display: none;
-        /* Hidden by default on mobile */
+        /* Stays hidden until .active is added */
         flex-direction: column;
         position: absolute;
         top: 80px;
-        /* Height of header */
         left: 0;
         width: 100%;
         background: var(--bg-primary);
-        backdrop-filter: blur(10px);
         padding: 2rem;
-        gap: 1.5rem;
-        border-bottom: 1px solid var(--glass-border);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         z-index: 1000;
-        text-align: center;
     }
 
-    /* Class added via JS to show the menu */
+    /* This is what the JS triggers */
     .nav-links.active {
         display: flex;
-        animation: slideDown 0.3s ease-out forwards;
     }
 
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* 3. Language Selector Dropdown on Mobile */
-    .lang-selector {
-        flex-direction: column;
-        margin-left: 0;
-        width: 100%;
-        padding-top: 1rem;
-        border-top: 1px solid var(--glass-border);
-    }
-
-    /* Hide non-active languages initially if you want a true "dropdown" click */
-    /* Alternatively, display them in a neat grid on mobile */
+    /* Language dropdown behavior */
     .lang-selector {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
-    }
-
-    .lang-btn {
         width: 100%;
-        padding: 0.5rem;
-        font-size: 1rem;
-    }
-
-    /* Standard responsive fixes for content */
-    .container {
-        padding: 0 1.5rem;
-    }
-
-    h1 {
-        font-size: 2.5rem !important;
     }
 }
