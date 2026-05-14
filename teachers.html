@@ -43,7 +43,7 @@
 
     <!-- Teachers Hero -->
     <section class="teachers-hero">
-        <div class="container">
+        <div class="container reveal">
             <h1 data-i18n="teachers_educator_tools">Educator Tools</h1>
             <p data-i18n="teachers_hero_desc">Everything you need to successfully integrate our cybersecurity visual
                 novel into your curriculum and
@@ -56,7 +56,7 @@
         <div class="container resources-grid">
 
             <!-- Instruction Manual -->
-            <div class="resource-section">
+            <div class="resource-section reveal reveal-stagger">
                 <h2 data-i18n="manual_title">Instruction Manual</h2>
                 <p style="margin-top: 1rem; color: var(--text-secondary);" data-i18n="manual_desc">Our comprehensive
                     instruction manual provides
@@ -214,8 +214,10 @@
         </div>
     </footer>
 
+    <div id="cursor-dot" aria-hidden="true"></div>
     <script src="js/translations.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/interactions.js"></script>
     <script>
         // Update smooth scrolling for teachers.html
         // We only want smooth scroll if the link is an anchor on the CURRENT page.

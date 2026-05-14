@@ -43,7 +43,7 @@
 
     <!-- Company Hero -->
     <section class="company-hero">
-        <div class="container">
+        <div class="container reveal">
             <h1 data-i18n="company_about_title">About Us</h1>
             <p data-i18n="company_about_desc">We are a dedicated team of educators, developers, and designers passionate
                 about bringing cybersecurity
@@ -56,7 +56,7 @@
         <div class="container">
 
             <div class="mission-vision-grid">
-                <div class="mv-card">
+                <div class="mv-card reveal reveal-stagger">
                     <h2 data-i18n="team_mission_title">Team Mission Statement</h2>
                     <p style="color: var(--text-secondary); line-height: 1.8;" data-i18n="mission_desc">
                         We want to teach students about network security using an engaging visual novel and taking real
@@ -64,7 +64,7 @@
                         individuals in the networking and security realm.
                     </p>
                 </div>
-                <div class="mv-card">
+                <div class="mv-card reveal reveal-stagger">
                     <h2 data-i18n="team_value_title">Team Value Proposition</h2>
                     <p style="color: var(--text-secondary); line-height: 1.8;" data-i18n="team_value_desc">
                         Enemy of the State allows for students to learn more about security and why it is vital in their
@@ -76,12 +76,12 @@
 
             <!-- Team Section -->
             <div class="team-section">
-                <h2 data-i18n="meet_team">Meet the Team</h2>
+                <h2 class="reveal" data-i18n="meet_team">Meet the Team</h2>
                 <div class="team-grid">
 
                     <!-- Team Member 1 -->
                     <a href="https://www.linkedin.com/in/valentyn-sarkisov/" target="_blank" rel="noopener noreferrer"
-                        class="team-card">
+                        class="team-card reveal reveal-stagger">
                         <div class="team-avatar">
                             <img src="images/valentyn_web_picture.jpg" alt="Valentyn">
                         </div>
@@ -204,8 +204,10 @@
         </div>
     </footer>
 
+    <div id="cursor-dot" aria-hidden="true"></div>
     <script src="js/translations.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/interactions.js"></script>
     <script>
         // Update smooth scrolling for company.html
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
