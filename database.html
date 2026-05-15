@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Database - Enemy of the State</title>
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+</head>
+
+<body class="bg-primary">
+
+    <!-- Floating Pill Navigation -->
+    <header id="main-nav">
+        <div class="nav-pill-inner">
+            <div class="logo">
+                <a href="index.html" class="logo-wrapper">
+                    <img src="images/nav_logo.png" alt="Enemy of the State Logo" class="nav-logo-img">
+                    Enemy of the <span>State</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="database.html" style="color: var(--text-primary); border-bottom: 2px solid var(--accent-primary);">Security DB</a></li>
+                <li><a href="teachers.html">Teacher Resources</a></li>
+                <li><a href="company.html">Company</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Database Header Section -->
+    <section class="section about" style="padding-top: 10rem; padding-bottom: 4rem;">
+        <div class="container text-center">
+            <h1 class="reveal">Security <span style="color: var(--accent-primary);">Database</span></h1>
+            <p class="large-text reveal" style="max-width: 600px; margin: 1rem auto 2rem;">Access highly classified terminology and agency intelligence. Filter queries to locate relevant definitions.</p>
+            
+            <div class="search-container reveal">
+                <i class="ph ph-magnifying-glass" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--accent-primary); font-size: 1.5rem;"></i>
+                <input type="text" id="search-input" placeholder="Search DOSSIER_ENTRIES (e.g., Encryption, PRISM)..." autocomplete="off">
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Bcrypt</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A password-hashing function designed to be computationally expensive and intentionally slow, making brute-force and dictionary attacks highly ineffective.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Boundless Informant</h3>
+                        <span class="db-category">Tool</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A data analysis tool used by the NSA to summarize and visualize the metadata and communications records they collect globally.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Caesar Cipher</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Simple substitution cipher where each letter is shifted by a fixed number. Easy to break but historically significant. Example: ROT-3 shifts A to D, B to E, and so on.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>CIA — The Obsidian Oversight (Central Intelligence Agency)</h3>
+                        <span class="db-category">Agency</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A civilian foreign intelligence service of the federal government of the United States, tasked with gathering, processing, and analyzing national security information. Known in-world as The Obsidian Oversight.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Dictionary Attack</h3>
+                        <span class="db-category">Attack Vector</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A method of breaking into a password-protected system by systematically entering every word in a dictionary or a list of common passwords (like rockyou.txt).</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Digital Forensics</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The recovery and investigation of material found in digital devices, often used to uncover deleted files, internet history, and hidden metadata.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>DNS (Domain Name System)</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The phonebook of the Internet. Translates human-readable domain names (like example.com) into machine-readable IP addresses.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Domestic Surveillance</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The monitoring of citizens within a country's borders by its own government, often a point of legal and ethical controversy.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Edward Snowden</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>An American former computer intelligence consultant who leaked highly classified information from the NSA in 2013, revealing numerous global surveillance programs.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Encryption Fingerprints</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Unique patterns or metadata in encrypted traffic that can reveal the type of encryption used, the application generating it, or even the user, without breaking the encryption itself.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>EXIF Metadata</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Hidden information embedded in image files, such as the camera model, date/time, and exact GPS coordinates of where the photo was taken.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Firewall</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Network security system that monitors and filters incoming and outgoing traffic based on predefined rules. Acts as a barrier between trusted and untrusted networks.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>FISA (Foreign Intelligence Surveillance Act)</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A United States federal law that establishes procedures for the physical and electronic surveillance and collection of foreign intelligence information.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Foreign Intelligence</h3>
+                        <span class="db-category">Agency</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Information relating to the capabilities, intentions, or activities of foreign governments, organizations, or persons.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Hash Function</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A one-way mathematical algorithm that maps data of arbitrary size to a fixed-size string. You cannot 'decrypt' a hash; you must guess the original input.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>HTTP (Hypertext Transfer Protocol)</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The foundation of data communication for the World Wide Web. It is unencrypted, meaning data sent via HTTP can be intercepted.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>HTTPS</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>HTTP with TLS/SSL encryption. Secures data between your browser and a web server. Look for the padlock icon in your browser's address bar.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Inspector General</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>An investigative official in a civil or military organization. In the intelligence community, they are responsible for internal audits and investigating whistleblowers' claims.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>John the Ripper</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A fast, open-source password cracking software tool used to perform dictionary attacks and rule-based mutations against password hashes.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Kali Linux</h3>
+                        <span class="db-category">Tool</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A Debian-derived Linux distribution designed for digital forensics and penetration testing. It comes pre-installed with hundreds of security and hacking tools.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>MAC Address</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A unique hardware identifier assigned to a network interface controller. Used by local networks and routers to identify specific devices.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Man-in-the-Middle Attack</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>An attacker secretly intercepts communication between two parties. Both parties think they're talking directly to each other. Key verification prevents this.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Mass Surveillance</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The intricate surveillance of an entire or a substantial fraction of a population in order to monitor that group of citizens.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>MD5</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>An older, widely used hashing algorithm that is now considered cryptographically broken and vulnerable to rapid brute-force attacks.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Metadata</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Data about data — who you communicated with, when, for how long, from where. Does not include the message content but can reveal intimate patterns of life.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>National Security</h3>
+                        <span class="db-category">Agency</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The security and defense of a nation state, including its citizens, economy, and institutions, which is regarded as a duty of government.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Network Security</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Policies and practices adopted to prevent and monitor unauthorized access, misuse, modification, or denial of a computer network and network-accessible resources.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>NSA — Signal Reach Network (National Security Agency)</h3>
+                        <span class="db-category">Agency</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A national-level intelligence agency of the United States Department of Defense, under the authority of the Director of National Intelligence. Known in-world as the Signal Reach Network.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>PGP (Pretty Good Privacy)</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Asymmetric encryption system using public/private key pairs. Public key encrypts, only the matching private key can decrypt. Used for secure email communication.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Private IP Ranges</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>IP addresses reserved for internal network use (like 192.168.x.x) that are not routable on the public internet.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Public Wi-Fi</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Unsecured wireless networks open to the public. Highly vulnerable to interception and man-in-the-middle attacks.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>RDP (Remote Desktop Protocol)</h3>
+                        <span class="db-category">Protocol</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A proprietary protocol developed by Microsoft that provides a user with a graphical interface to connect to another computer over a network connection.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Reverse Shell</h3>
+                        <span class="db-category">Attack Vector</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A type of shell in which the target machine communicates back to the attacking machine. Often used to bypass firewalls that block incoming connections.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Secure Deletion</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The process of permanently destroying digital data by overwriting the physical disk sectors with random data (e.g., using 'shred'), preventing forensic recovery.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>SecureDrop</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>An open-source whistleblowing platform that allows anonymous document submission. Used by major news organizations to protect sources.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Session Token</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A unique piece of data generated by a server and stored in a user's browser (often as a cookie) to keep them authenticated after logging in.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>SSH (Secure Shell)</h3>
+                        <span class="db-category">Protocol</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A cryptographic network protocol for operating network services securely over an unsecured network, often used for remote command-line login.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Telnet</h3>
+                        <span class="db-category">Protocol</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>An application protocol providing a bidirectional interactive text-oriented communication facility. Unencrypted and largely obsolete for secure networks.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>TLS (Transport Layer Security)</h3>
+                        <span class="db-category">Protocol</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A cryptographic protocol designed to provide communications security over a computer network, widely used in HTTPS.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>TOR (The Onion Router)</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Anonymization network that routes traffic through multiple relay nodes, each encrypting a layer. Makes it very difficult to trace traffic to its source.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Traffic Correlation Attack</h3>
+                        <span class="db-category">Attack Vector</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A method used to de-anonymize Tor users by matching the timing and volume of traffic entering the Tor network with traffic exiting it.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>USA FREEDOM Act</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A US law enacted in 2015 that restored and modified several provisions of the Patriot Act, imposing some new limits on the bulk collection of telecommunication metadata.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>VPN (Virtual Private Network)</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Creates an encrypted tunnel between your device and a server, hiding your traffic from local network surveillance. Essential on untrusted networks like public Wi-Fi.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Zero-Day Exploit</h3>
+                        <span class="db-category">Tool</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A vulnerability in software unknown to the vendor. Called zero-day because there are zero days of notice before it is exploited. No patch exists yet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Database Grid Section -->
+    <section class="section bg-prism" style="padding-top: 2rem; min-height: 50vh;">
+        <div class="container">
+            <div class="db-grid" id="db-grid">
+                
+                <!-- Sample Card 1 -->
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>AES-256</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Advanced Encryption Standard with a 256-bit key size. It is widely considered computationally unbreakable by current technology and is the standard for top-secret government communications.</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 2 -->
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>PRISM</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A clandestine mass electronic surveillance data mining program. It enabled direct access to the servers of major technology companies to collect communications data without individual warrants.</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 3 -->
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>XKeyscore</h3>
+                        <span class="db-category">Intelligence Tool</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A formerly secret computer system used by allied intelligence agencies for searching and analyzing global internet data, providing near real-time tracking of individual users' online activities.</p>
+                    </div>
+                </div>
+
+                <!-- Sample Card 4 -->
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>OpSec</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Operations Security. The process of protecting individual pieces of data that could be grouped together to give the bigger picture to an adversary. Critical for whistleblowers avoiding detection.</p>
+                    </div>
+                </div>
+
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Bcrypt</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A password-hashing function designed to be computationally expensive and intentionally slow, making brute-force and dictionary attacks highly ineffective.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Boundless Informant</h3>
+                        <span class="db-category">Tool</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A data analysis tool used by the NSA to summarize and visualize the metadata and communications records they collect globally.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Caesar Cipher</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Simple substitution cipher where each letter is shifted by a fixed number. Easy to break but historically significant. Example: ROT-3 shifts A to D, B to E, and so on.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>CIA — The Obsidian Oversight (Central Intelligence Agency)</h3>
+                        <span class="db-category">Agency</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A civilian foreign intelligence service of the federal government of the United States, tasked with gathering, processing, and analyzing national security information. Known in-world as The Obsidian Oversight.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Dictionary Attack</h3>
+                        <span class="db-category">Attack Vector</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A method of breaking into a password-protected system by systematically entering every word in a dictionary or a list of common passwords (like rockyou.txt).</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Digital Forensics</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The recovery and investigation of material found in digital devices, often used to uncover deleted files, internet history, and hidden metadata.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>DNS (Domain Name System)</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The phonebook of the Internet. Translates human-readable domain names (like example.com) into machine-readable IP addresses.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Domestic Surveillance</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The monitoring of citizens within a country's borders by its own government, often a point of legal and ethical controversy.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Edward Snowden</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>An American former computer intelligence consultant who leaked highly classified information from the NSA in 2013, revealing numerous global surveillance programs.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Encryption Fingerprints</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Unique patterns or metadata in encrypted traffic that can reveal the type of encryption used, the application generating it, or even the user, without breaking the encryption itself.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>EXIF Metadata</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Hidden information embedded in image files, such as the camera model, date/time, and exact GPS coordinates of where the photo was taken.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Firewall</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Network security system that monitors and filters incoming and outgoing traffic based on predefined rules. Acts as a barrier between trusted and untrusted networks.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>FISA (Foreign Intelligence Surveillance Act)</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A United States federal law that establishes procedures for the physical and electronic surveillance and collection of foreign intelligence information.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Foreign Intelligence</h3>
+                        <span class="db-category">Agency</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Information relating to the capabilities, intentions, or activities of foreign governments, organizations, or persons.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Hash Function</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A one-way mathematical algorithm that maps data of arbitrary size to a fixed-size string. You cannot 'decrypt' a hash; you must guess the original input.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>HTTP (Hypertext Transfer Protocol)</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The foundation of data communication for the World Wide Web. It is unencrypted, meaning data sent via HTTP can be intercepted.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>HTTPS</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>HTTP with TLS/SSL encryption. Secures data between your browser and a web server. Look for the padlock icon in your browser's address bar.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Inspector General</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>An investigative official in a civil or military organization. In the intelligence community, they are responsible for internal audits and investigating whistleblowers' claims.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>John the Ripper</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A fast, open-source password cracking software tool used to perform dictionary attacks and rule-based mutations against password hashes.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Kali Linux</h3>
+                        <span class="db-category">Tool</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A Debian-derived Linux distribution designed for digital forensics and penetration testing. It comes pre-installed with hundreds of security and hacking tools.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>MAC Address</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A unique hardware identifier assigned to a network interface controller. Used by local networks and routers to identify specific devices.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Man-in-the-Middle Attack</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>An attacker secretly intercepts communication between two parties. Both parties think they're talking directly to each other. Key verification prevents this.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Mass Surveillance</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The intricate surveillance of an entire or a substantial fraction of a population in order to monitor that group of citizens.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>MD5</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>An older, widely used hashing algorithm that is now considered cryptographically broken and vulnerable to rapid brute-force attacks.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Metadata</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Data about data — who you communicated with, when, for how long, from where. Does not include the message content but can reveal intimate patterns of life.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>National Security</h3>
+                        <span class="db-category">Agency</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The security and defense of a nation state, including its citizens, economy, and institutions, which is regarded as a duty of government.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Network Security</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Policies and practices adopted to prevent and monitor unauthorized access, misuse, modification, or denial of a computer network and network-accessible resources.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>NSA — Signal Reach Network (National Security Agency)</h3>
+                        <span class="db-category">Agency</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A national-level intelligence agency of the United States Department of Defense, under the authority of the Director of National Intelligence. Known in-world as the Signal Reach Network.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>PGP (Pretty Good Privacy)</h3>
+                        <span class="db-category">Encryption</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Asymmetric encryption system using public/private key pairs. Public key encrypts, only the matching private key can decrypt. Used for secure email communication.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Private IP Ranges</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>IP addresses reserved for internal network use (like 192.168.x.x) that are not routable on the public internet.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Public Wi-Fi</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Unsecured wireless networks open to the public. Highly vulnerable to interception and man-in-the-middle attacks.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>RDP (Remote Desktop Protocol)</h3>
+                        <span class="db-category">Protocol</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A proprietary protocol developed by Microsoft that provides a user with a graphical interface to connect to another computer over a network connection.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Reverse Shell</h3>
+                        <span class="db-category">Attack Vector</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A type of shell in which the target machine communicates back to the attacking machine. Often used to bypass firewalls that block incoming connections.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Secure Deletion</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>The process of permanently destroying digital data by overwriting the physical disk sectors with random data (e.g., using 'shred'), preventing forensic recovery.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>SecureDrop</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>An open-source whistleblowing platform that allows anonymous document submission. Used by major news organizations to protect sources.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Session Token</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A unique piece of data generated by a server and stored in a user's browser (often as a cookie) to keep them authenticated after logging in.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>SSH (Secure Shell)</h3>
+                        <span class="db-category">Protocol</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A cryptographic network protocol for operating network services securely over an unsecured network, often used for remote command-line login.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Telnet</h3>
+                        <span class="db-category">Protocol</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>An application protocol providing a bidirectional interactive text-oriented communication facility. Unencrypted and largely obsolete for secure networks.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>TLS (Transport Layer Security)</h3>
+                        <span class="db-category">Protocol</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A cryptographic protocol designed to provide communications security over a computer network, widely used in HTTPS.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>TOR (The Onion Router)</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Anonymization network that routes traffic through multiple relay nodes, each encrypting a layer. Makes it very difficult to trace traffic to its source.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Traffic Correlation Attack</h3>
+                        <span class="db-category">Attack Vector</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A method used to de-anonymize Tor users by matching the timing and volume of traffic entering the Tor network with traffic exiting it.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>USA FREEDOM Act</h3>
+                        <span class="db-category">Concept</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A US law enacted in 2015 that restored and modified several provisions of the Patriot Act, imposing some new limits on the bulk collection of telecommunication metadata.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>VPN (Virtual Private Network)</h3>
+                        <span class="db-category">Surveillance Program</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>Creates an encrypted tunnel between your device and a server, hiding your traffic from local network surveillance. Essential on untrusted networks like public Wi-Fi.</p>
+                    </div>
+                </div>
+                <div class="db-card reveal reveal-stagger">
+                    <div class="db-card-header">
+                        <h3>Zero-Day Exploit</h3>
+                        <span class="db-category">Tool</span>
+                    </div>
+                    <div class="db-card-body">
+                        <p>A vulnerability in software unknown to the vendor. Called zero-day because there are zero days of notice before it is exploited. No patch exists yet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">Enemy of the <span>State</span></div>
+                    <p class="footer-tagline">A 5G security visual novel for the next generation of digital citizens.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5 class="footer-col-title">Navigate</h5>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#gameplay">Gameplay</a></li>
+                        <li><a href="company.html">Company</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 class="footer-col-title">Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="teachers.html">Teacher Resources</a></li>
+                        <li><a href="teachers.html">Curriculum Guide</a></li>
+                        <li><a href="https://noah-weckx-07.itch.io/enemy-of-the-state-demo" target="_blank" rel="noopener noreferrer">Itch.io Page</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 class="footer-col-title">Contact</h5>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@enemyofthestate.edu">info@enemyofthestate.edu</a></li>
+                        <li><a href="tel:+31201234567">+31 20 123 4567</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span id="year"></span> <span data-i18n="footer_text">Educational 5G Security Games. All rights reserved.</span></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/database.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>

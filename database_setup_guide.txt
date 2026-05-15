@@ -1,0 +1,28 @@
+# Security Database Setup Guide
+
+This guide will help you populate the remainder of the 40+ definitions from the `DOSSIER_ENTRIES` into the newly created `database.html` page.
+
+## Structure of a Database Card
+
+The `database.html` page uses a grid of "cards" to display each term. We've built the framework and included cards for AES-256, PRISM, XKeyscore, and OpSec.
+
+To add the rest of the terms, you can use an AI like Gemini. Give Gemini your `definitions.rpy` or `DOSSIER_ENTRIES` file, and ask it to output the terms in the following HTML format:
+
+```html
+<div class="db-card reveal">
+    <div class="db-card-header">
+        <h3>[TERM NAME]</h3>
+        <span class="db-category">[CATEGORY]</span>
+    </div>
+    <div class="db-card-body">
+        <p>[DEFINITION TEXT]</p>
+    </div>
+</div>
+```
+
+**Instructions for Gemini Prompt:**
+"Here is a list of terms and their definitions from my game's DOSSIER_ENTRIES. I am building a Security Database webpage. Please convert each of these terms into the following HTML snippet: [Insert snippet above]. Make sure to categorize them logically (e.g., 'Encryption', 'Surveillance Program', 'Concept', 'Tool')."
+
+Once Gemini generates the HTML for all 40+ terms, simply copy the output and paste it inside the `<div class="db-grid" id="db-grid">` section within your `database.html` file. 
+
+The search and filter functionality (`js/database.js`) is already built to automatically index and search whatever cards are placed in that grid!

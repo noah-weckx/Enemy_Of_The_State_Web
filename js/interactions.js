@@ -9,35 +9,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const isFinePointer  = window.matchMedia('(pointer: fine)').matches;
 
-    // ── 1. Lerp Smooth Scroll (trackpad + mouse only) ─────────────────────
-    // Touch/tablet use native momentum scroll + CSS scroll-behavior: smooth
-    if (!prefersReduced && isFinePointer) {
-        let currentY = window.scrollY;
-        let targetY  = window.scrollY;
+    // ── 1. Lenis Smooth Scroll ──────────────────────────────────────────────
+    let lenis;
+    if (!prefersReduced) {
+        lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
 
-        const lerp = (a, b, t) => a + (b - a) * t;
-
-        // Wheel event — trackpad and scroll wheel
-        window.addEventListener('wheel', (e) => {
-            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-            targetY = Math.max(0, Math.min(maxScroll, targetY + e.deltaY * 1.15));
-        }, { passive: true });
-
-        // Sync on large jumps (anchor clicks, keyboard Page Down, etc.)
-        window.addEventListener('scroll', () => {
-            if (Math.abs(window.scrollY - currentY) > 100) {
-                currentY = window.scrollY;
-                targetY  = window.scrollY;
-            }
-        }, { passive: true });
-
-        (function smoothLoop() {
-            currentY = lerp(currentY, targetY, 0.09);
-            if (Math.abs(currentY - targetY) > 0.4) {
-                window.scrollTo(0, currentY);
-            }
-            requestAnimationFrame(smoothLoop);
-        })();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
     }
 
     // ── 2. Scroll Reveal Observer ──────────────────────────────────────────
@@ -71,21 +62,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ── 4. Parallax Orbs — rAF throttled ──────────────────────────────────
+    // ── 4. Parallax Orbs — Synchronized with Lenis ─────────────────────────
     if (!prefersReduced) {
         const slowOrbs = document.querySelectorAll('.parallax-slow');
         const fastOrbs = document.querySelectorAll('.parallax-fast');
-        let scrollRaf  = null;
 
-        window.addEventListener('scroll', () => {
-            if (scrollRaf) return;
-            scrollRaf = requestAnimationFrame(() => {
-                const s = window.scrollY;
-                slowOrbs.forEach(o => { o.style.transform = `translateY(${s * 0.18}px)`; });
-                fastOrbs.forEach(o => { o.style.transform = `translateY(${s * 0.36}px)`; });
-                scrollRaf = null;
+        const updateParallax = (scrollY) => {
+            // Offset intensity 0.02 as requested
+            slowOrbs.forEach(o => { o.style.transform = `translateY(${scrollY * 0.02}px)`; });
+            fastOrbs.forEach(o => { o.style.transform = `translateY(${scrollY * 0.04}px)`; });
+        };
+
+        if (lenis) {
+            lenis.on('scroll', (e) => {
+                updateParallax(e.scroll);
             });
-        }, { passive: true });
+        } else {
+            let scrollRaf = null;
+            window.addEventListener('scroll', () => {
+                if (scrollRaf) return;
+                scrollRaf = requestAnimationFrame(() => {
+                    updateParallax(window.scrollY);
+                    scrollRaf = null;
+                });
+            }, { passive: true });
+        }
     }
 
     // ── 5. Copyright year ──────────────────────────────────────────────────

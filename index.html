@@ -8,6 +8,8 @@
     <link rel="icon" type="image/jpeg" href="images/logo.jpg">
     <meta name="description" content="Enemy of the State is an engaging visual novel teaching students about network security and privacy through interactive gameplay.">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
     <script type="importmap">
     {"imports": {"three": "https://esm.sh/three@0.165.0"}}
     </script>
@@ -29,6 +31,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#download" data-i18n="nav_download">Download</a></li>
+                <li><a href="database.html">Security DB</a></li>
                 <li><a href="teachers.html" data-i18n="nav_teachers">Teacher Resources</a></li>
                 <li><a href="company.html" data-i18n="nav_company">Company</a></li>
                 <li class="lang-selector">
@@ -44,7 +47,7 @@
     </header>
 
     <!-- Hero Section — Asymmetric Split -->
-    <section class="hero" id="home">
+    <section class="hero bg-nsa-terminal" id="home">
         <div class="orb orb-1 parallax-slow" aria-hidden="true"></div>
         <div class="orb orb-2 parallax-fast" aria-hidden="true"></div>
         <div class="container">
@@ -59,18 +62,18 @@
                     </div>
                     <div class="hero-stats reveal">
                         <div class="hero-stat">
-                            <span class="hero-stat-num">3+</span>
-                            <span class="hero-stat-label">Unique Endings</span>
+                            <span class="hero-stat-num" id="trust-score">85%</span>
+                            <span class="hero-stat-label">Trust Score</span>
                         </div>
                         <div class="hero-stat-divider" aria-hidden="true"></div>
                         <div class="hero-stat">
-                            <span class="hero-stat-num">4</span>
-                            <span class="hero-stat-label">Mini-games</span>
+                            <span class="hero-stat-num" id="suspicion-level">CRITICAL</span>
+                            <span class="hero-stat-label">Suspicion Level</span>
                         </div>
                         <div class="hero-stat-divider" aria-hidden="true"></div>
                         <div class="hero-stat">
-                            <span class="hero-stat-num">4</span>
-                            <span class="hero-stat-label">Languages</span>
+                            <span class="hero-stat-num" id="evidence-secured">14/20</span>
+                            <span class="hero-stat-label">Evidence Secured</span>
                         </div>
                     </div>
                 </div>
@@ -141,7 +144,7 @@
     </section>
 
     <!-- Gameplay Section — Bento Grid -->
-    <section class="section gameplay" id="gameplay">
+    <section class="section gameplay bg-prism" id="gameplay">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-label">Features</span>
@@ -151,43 +154,32 @@
                 <p class="large-text" data-i18n="gameplay_desc">Step into a high-stakes world where privacy is a luxury and data is power. Navigate complex choices, learn critical cybersecurity concepts, and master the art of digital defense.</p>
             </div>
             <div class="bento-true bento-gameplay">
-                <!-- Wide left -->
+                <!-- Wide left: Trace & Locations -->
                 <div class="bento-card reveal reveal-stagger">
                     <div class="bento-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
+                        <i class="ph ph-globe" style="font-size: 28px; color: var(--accent-primary);"></i>
                     </div>
-                    <h3 data-i18n="gameplay_title_1">Branching Narratives</h3>
-                    <p data-i18n="gameplay_text_1">Your choices matter. Every decision can lead to a different ending, teaching you the real-world consequences of digital actions.</p>
-                    <span class="bento-badge">3+ Endings</span>
+                    <h3>Global Trace</h3>
+                    <p>Track network packets across international nodes, from Hong Kong to Moscow, managing your digital footprint.</p>
+                    <span class="bento-badge">OpSec Protocol</span>
                 </div>
-                <!-- Tall right — radial glow on hover -->
+                <!-- Tall right: Interactive Mini-games -->
                 <div class="bento-card bento-tall bento-glow reveal reveal-stagger">
                     <div class="bento-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
+                        <i class="ph ph-terminal" style="font-size: 28px; color: var(--accent-primary);"></i>
                     </div>
-                    <h3 data-i18n="gameplay_title_2">Interactive Mini-games</h3>
-                    <p data-i18n="gameplay_text_2">Test your skills with hands-on challenges that simulate real-world security scenarios, from brute force attacks to secure deletion.</p>
-                    <span class="bento-badge">4 Challenges</span>
+                    <h3>Interactive Terminal</h3>
+                    <p>Bypass security measures and decrypt sensitive files using real-world terminal commands and logic.</p>
+                    <span class="bento-badge">Decrypt Module</span>
                 </div>
-                <!-- Wide left bottom — real events -->
+                <!-- Wide left bottom: Network Security -->
                 <div class="bento-card reveal reveal-stagger">
                     <div class="bento-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
+                        <i class="ph ph-shield-check" style="font-size: 28px; color: var(--accent-secondary);"></i>
                     </div>
-                    <h3>Based on Real Events</h3>
-                    <p>Inspired by the true story of Edward Snowden — experience firsthand how surveillance, privacy, and digital freedom collide on the world stage.</p>
-                    <span class="bento-badge bento-badge-secondary">True Story</span>
+                    <h3>Network Firewall</h3>
+                    <p>Defend against incoming threats and establish secure connections to exfiltrate critical agency data.</p>
+                    <span class="bento-badge bento-badge-secondary">Security Systems</span>
                 </div>
             </div>
         </div>
@@ -202,6 +194,38 @@
             </div>
             <div class="mission-intro reveal">
                 <p class="large-text" data-i18n="mission_desc">We want to teach students about network security using an engaging visual novel and taking real life events to explain the terms and ideas. In doing so, we will help them become more educated individuals in the networking and security realm.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Players (Personnel Dossier) -->
+    <section class="section players bg-nsa-terminal" id="players">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Personnel Dossier</span>
+                <h2>Key Players</h2>
+            </div>
+            <div class="players-grid">
+                <div class="player-card reveal reveal-stagger" style="border-top: 4px solid #00FFD1;">
+                    <h3>Edward</h3>
+                    <p class="player-role">The Whistleblower</p>
+                    <p>A brilliant infrastructure analyst who discovers the true scope of global surveillance and must decide what to do with the truth.</p>
+                </div>
+                <div class="player-card reveal reveal-stagger" style="border-top: 4px solid #FFD700;">
+                    <h3>Grayson Wardell</h3>
+                    <p class="player-role">Senior Analyst</p>
+                    <p>A seasoned veteran of the agency, balancing duty to the nation with the ethical implications of mass data collection.</p>
+                </div>
+                <div class="player-card reveal reveal-stagger" style="border-top: 4px solid var(--accent-secondary);">
+                    <h3>Leah Portman</h3>
+                    <p class="player-role">Investigative Journalist</p>
+                    <p>The crucial link to the public, tasked with verifying and securely publishing the leaked documents without compromising OpSec.</p>
+                </div>
+                <div class="player-card reveal reveal-stagger" style="border-top: 4px solid #FF3366;">
+                    <h3>Dir. Marcus Hale</h3>
+                    <p class="player-role">Agency Director</p>
+                    <p>The uncompromising leader of the intelligence apparatus, determined to maintain control and stop the leak at any cost.</p>
+                </div>
             </div>
         </div>
     </section>
