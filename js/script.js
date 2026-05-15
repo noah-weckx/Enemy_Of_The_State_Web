@@ -65,6 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Update placeholders with data-i18n-placeholder attribute
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (window.translations[lang][key]) {
+                el.setAttribute('placeholder', window.translations[lang][key]);
+            }
+        });
+
         // Update select values
         langSelects.forEach(select => {
             select.value = lang;
