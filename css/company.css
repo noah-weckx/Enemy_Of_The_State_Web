@@ -14,8 +14,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/hero_background.png') center/cover;
-    opacity: 0.1;
+    background: url('../images/bg_prism.png') center/cover;
+    opacity: 0.15;
     z-index: 0;
 }
 

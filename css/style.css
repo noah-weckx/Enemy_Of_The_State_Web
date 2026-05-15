@@ -4,8 +4,8 @@
 
 :root {
     /* Primary Color Palette */
-    --bg-primary: #002922;      /* Deep Jungle Green */
-    --bg-secondary: #212339;    /* Space Cadet */
+    --bg-primary: #0B0B0B;      /* Deep Jungle Green */
+    --bg-secondary: #111111;    /* Space Cadet */
     --bg-card: #4D5186;         /* Liberty */
     
     --accent-primary: #00FFD1;  /* Cyan */
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Terminal Blinking Cursor */
-h1::after, h2::after, h3::after {
+.system-status-label::after, .version-number::after, .decorative-ui-accent::after {
     content: '_';
     opacity: 1;
     animation: cursor_blink 1s step-end infinite;
@@ -834,7 +834,8 @@ footer {
 
 .footer-social {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .social-link {
